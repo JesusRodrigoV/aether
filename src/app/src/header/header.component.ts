@@ -15,9 +15,9 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-      navLinks.classList.toggle('show');
-    }
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
   }
 }

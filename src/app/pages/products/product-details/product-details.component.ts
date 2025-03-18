@@ -20,5 +20,10 @@ export class ProductDetailsComponent {
       queryParams: { productId: this.route.snapshot.params['id'] },
     });
   }
+  contactSales() {
+    this.router.navigate(['/contact-sales'], {
+      queryParams: { productId: this.route.snapshot.params['id'] },
+    });
+  }
   product$ = this.productService.getProduct(this.route.snapshot.params['id']);
 }

@@ -5,8 +5,10 @@
       Innovación y excelencia en soluciones tecnológicas personalizadas
     </p>
     <div class="cta-buttons">
-      <button class="btn-primary">Conoce más</button>
-      <button class="btn-secondary">Contáctanos</button>
+      <button class="btn-primary" (click)="openModal()">Conoce más</button>
+      <button class="btn-secondary" routerLink="/contact-sales">
+        Contáctanos
+      </button>
     </div>
   </div>
   <div class="image-container" data-aos="fade-left">
@@ -50,9 +52,9 @@
         Desarrollar soluciones disruptivas que transformen la gestión
         empresarial
       </p>
-      <a href="#" class="learn-more"
-        >Saber más <i class="bx bx-right-arrow-alt"></i
-      ></a>
+      <a routerLink="/innovation" class="learn-more">
+        Saber más <i class="bx bx-right-arrow-alt"></i>
+      </a>
     </div>
     <div class="column" data-aos="zoom-in" data-aos-delay="100">
       <div class="icon-wrapper">
@@ -60,9 +62,9 @@
       </div>
       <h3>Excelencia</h3>
       <p>Entregar sistemas de clase mundial con rendimiento cuántico</p>
-      <a href="#" class="learn-more"
-        >Saber más <i class="bx bx-right-arrow-alt"></i
-      ></a>
+      <a routerLink="/excellence" class="learn-more">
+        Saber más <i class="bx bx-right-arrow-alt"></i>
+      </a>
     </div>
     <div class="column" data-aos="zoom-in" data-aos-delay="200">
       <div class="icon-wrapper">
@@ -70,9 +72,23 @@
       </div>
       <h3>Sostenibilidad</h3>
       <p>Tecnología verde que reduce la huella de carbono</p>
-      <a href="#" class="learn-more"
-        >Saber más <i class="bx bx-right-arrow-alt"></i
-      ></a>
+      <a routerLink="/sustainability" class="learn-more">
+        Saber más <i class="bx bx-right-arrow-alt"></i>
+      </a>
     </div>
   </div>
 </section>
+<div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeModal()">✖</button>
+    <h2>Sobre Nosotros</h2>
+    <p>
+      Somos una empresa dedicada a la innovación tecnológica con más de 6 años
+      de experiencia en el sector.
+    </p>
+    <p>
+      Nuestro enfoque está en la excelencia y sostenibilidad, asegurando un
+      impacto positivo en nuestros clientes y el medio ambiente.
+    </p>
+  </div>
+</div>

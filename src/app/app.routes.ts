@@ -30,6 +30,26 @@ export const routes: Routes = [
     title: 'QuantumCore - Nosotros',
   },
   {
+    path: 'innovation',
+    loadComponent: () =>
+      import('./pages/about/innovation/innovation.component'),
+  },
+  {
+    path: 'excellence',
+    loadComponent: () =>
+      import('./pages/about/excellence/excellence.component'),
+  },
+  {
+    path: 'sustainability',
+    loadComponent: () =>
+      import('./pages/about/sustainability/sustainability.component'),
+  },
+  {
+    path: 'contact-sales',
+    loadComponent: () =>
+      import('./pages/contact-sales/contact-sales.component'),
+  },
+  {
     path: 'demo-access',
     loadComponent: () => import('./pages/demo-access/demo-access.component'),
     title: 'QuantumCore - Acceso de demostración',

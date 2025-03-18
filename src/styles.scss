@@ -158,11 +158,27 @@ body {
 
 // Media Queries
 @media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-
   .btn {
     padding: 0.8rem 1.5rem;
+  }
+}
+.content-page {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  color: var(--text-primary);
+
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--background-light);
+    box-shadow: var(--shadow-md);
+    margin: 20px 0;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
   }
 }

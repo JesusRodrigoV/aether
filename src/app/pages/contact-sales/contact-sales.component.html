@@ -1,0 +1,23 @@
+<div class="contact-container">
+  <h1>Contactar Ventas</h1>
+  <p>Déjanos tu información y te contactaremos en breve.</p>
+
+  <form *ngIf="!submitted" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+    <label>Nombre</label>
+    <input type="text" formControlName="name" required />
+
+    <label>Email</label>
+    <input type="email" formControlName="email" required />
+
+    <label>Mensaje</label>
+    <textarea formControlName="message" required></textarea>
+
+    <button type="submit" class="btn-primary">Enviar</button>
+  </form>
+
+  <div *ngIf="submitted" class="confirmation">
+    <i class="bx bx-check-circle"></i>
+    <h2>¡Gracias por contactarnos!</h2>
+    <p>Nos pondremos en contacto contigo en breve.</p>
+  </div>
+</div>

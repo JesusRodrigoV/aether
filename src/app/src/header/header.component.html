@@ -5,27 +5,39 @@
       <span>Aether</span>
     </a>
 
-    <div class="nav-links">
+    <div class="nav-links" [ngClass]="{ show: isMobileMenuOpen }">
       <a
         routerLink="/"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMobileMenu()"
       >
         <i class="bx bx-home"></i>
         <span>Inicio</span>
       </a>
-      <a routerLink="/products" routerLinkActive="active">
+      <a
+        routerLink="/products"
+        routerLinkActive="active"
+        (click)="closeMobileMenu()"
+      >
         <i class="bx bx-package"></i>
         <span>Productos</span>
       </a>
-      <a routerLink="/about" routerLinkActive="active">
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        (click)="closeMobileMenu()"
+      >
         <i class="bx bx-building"></i>
         <span>Nosotros</span>
       </a>
     </div>
 
     <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
-      <i class="bx bx-menu"></i>
+      <i
+        class="bx"
+        [ngClass]="{ 'bx-menu': !isMobileMenuOpen, 'bx-x': isMobileMenuOpen }"
+      ></i>
     </button>
   </nav>
 </header>

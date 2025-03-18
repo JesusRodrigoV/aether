@@ -6,7 +6,7 @@ import { delay, of } from 'rxjs';
 })
 export class DemoAccessService {
   private validCodes = [
-    'BOLTELECOM-7G-2024',
+    'BOLTELECOM-7G-2025',
     'QUANTUM-ACCESS-2024',
     'NEXUS-BETA-001',
   ];
