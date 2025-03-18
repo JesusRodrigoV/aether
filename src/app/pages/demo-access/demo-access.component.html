@@ -1,0 +1,37 @@
+<section class="beta-container">
+  <div class="beta-card">
+    <h2>Acceso Anticipado Exclusivo</h2>
+
+    <div class="product-reference" *ngIf="productId">
+      <p>
+        Solicitud para: <strong>{{ productId | productName }}</strong>
+      </p>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #betaForm="ngForm">
+      <div class="form-group">
+        <label for="accessCode">Código de Acceso</label>
+        <input
+          type="text"
+          id="accessCode"
+          name="accessCode"
+          [(ngModel)]="accessCode"
+          required
+          placeholder="Ej: CODIGOACCESO-12-3456"
+        />
+      </div>
+
+      <div class="status-message" [class.error]="isError" *ngIf="message">
+        {{ message }}
+      </div>
+
+      <button type="submit" [disabled]="isLoading">
+        {{ isLoading ? "Verificando..." : "Validar Acceso" }}
+      </button>
+    </form>
+
+    <div class="help-text">
+      <p>¿Necesitas un código? Contacta a nuestro equipo de ventas.</p>
+    </div>
+  </div>
+</section>

@@ -20,9 +20,19 @@ export const routes: Routes = [
     title: 'QuantumCore - Detalles',
   },
   {
+    path: 'dashboard',
+    loadComponent: () => import('./pages/dashboard/dashboard.component'),
+    title: 'QuantumCore - Dashboard',
+  },
+  {
     path: 'about',
     loadComponent: () => import('./pages/about/about.component'),
     title: 'QuantumCore - Nosotros',
+  },
+  {
+    path: 'demo-access',
+    loadComponent: () => import('./pages/demo-access/demo-access.component'),
+    title: 'QuantumCore - Acceso de demostración',
   },
   { path: '**', redirectTo: '' },
 ];

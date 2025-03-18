@@ -1,27 +1,27 @@
 // Variables SCSS
-$dark-blue-1: #1a1a2e;
-$dark-blue-2: #16213e;
-$indigo-primary: #6366f1;
-$purple-accent: #a855f7;
-$indigo-light: #a5b4fc;
+$orange-wheel: #f8862dff;
+$black: #000107ff;
+$smoky-black: #0d0200ff;
+$caribbean-current: #086375ff;
+$turquoise: #1dd3b0ff;
+$text-white: #ffffff;
 $text-dark: #1e293b;
 $text-gray: #64748b;
-$text-white: #ffffff;
 $border-light: #e2e8f0;
 
 // Variables CSS Globales
 :root {
   // Colores Principales
-  --primary: #{$indigo-primary};
-  --primary-dark: #4f46e5;
-  --accent: #{$purple-accent};
-  --background-dark: #{$dark-blue-1};
+  --primary: #{$caribbean-current};
+  --primary-dark: #{$smoky-black};
+  --accent: #{$orange-wheel};
+  --background-dark: #{$black};
   --background-light: #{$text-white};
 
   // Textos
   --text-primary: #{$text-dark};
   --text-secondary: #{$text-gray};
-  --text-light: #{$indigo-light};
+  --text-light: #{$turquoise};
 
   // Bordes
   --border-color: #{$border-light};
@@ -35,19 +35,23 @@ $border-light: #e2e8f0;
   // Gradientes
   --gradient-primary: linear-gradient(
     45deg,
-    #{$indigo-primary},
-    #{$purple-accent}
+    #{$caribbean-current},
+    #{$turquoise}
   );
   --gradient-background: linear-gradient(
     135deg,
-    #{$dark-blue-1} 0%,
-    #{$dark-blue-2} 100%
+    #{$black} 0%,
+    #{$smoky-black} 100%
   );
-  --gradient-title: linear-gradient(to right, #{$text-white}, #{$indigo-light});
+  --gradient-title: linear-gradient(
+    to right,
+    #{$caribbean-current},
+    #{$turquoise}
+  );
   --gradient-decorator: linear-gradient(
     to right,
-    #{$indigo-primary},
-    #{$purple-accent}
+    #{$orange-wheel},
+    #{$caribbean-current}
   );
 
   // Estados y Alertas
@@ -64,11 +68,6 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--background-light);
-}
-
-.container {
-  min-height: calc(100vh - 120px);
-  margin: 0 auto;
 }
 
 // Utilidades de Botones

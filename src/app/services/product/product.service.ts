@@ -69,10 +69,10 @@ export class ProductService {
   ];
 
   getProducts() {
-    return of(this.products).pipe(delay(500));
+    return of(this.products).pipe(delay(50));
   }
 
   getProduct(id: string) {
-    return of(this.products.find((p) => p.id === id)).pipe(delay(500));
+    return of(this.products.find((p) => p.id === id)).pipe(delay(50));
   }
 }

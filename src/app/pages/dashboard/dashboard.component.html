@@ -1,0 +1,209 @@
+<div class="dashboard-container">
+  <!-- Sidebar Menu -->
+  <aside class="sidebar">
+    <div class="logo-container">
+      <i class="bx bx-buildings company-icon"></i>
+    </div>
+    <nav class="nav-menu">
+      <button class="nav-item active">
+        <i class="bx bxs-dashboard"></i>
+        <span class="tooltip">Dashboard</span>
+      </button>
+      <button class="nav-item">
+        <i class="bx bx-user"></i>
+        <span class="tooltip">Clientes</span>
+      </button>
+      <button class="nav-item">
+        <i class="bx bx-store"></i>
+        <span class="tooltip">Ventas</span>
+      </button>
+      <button class="nav-item">
+        <i class="bx bx-line-chart"></i>
+        <span class="tooltip">Análisis</span>
+      </button>
+      <button class="nav-item">
+        <i class="bx bx-calendar-event"></i>
+        <span class="tooltip">Calendario</span>
+      </button>
+      <button class="nav-item">
+        <i class="bx bx-task"></i>
+        <span class="tooltip">Tareas</span>
+      </button>
+      <button class="nav-item">
+        <i class="bx bx-conversation"></i>
+        <span class="tooltip">Mensajes</span>
+      </button>
+    </nav>
+    <div class="bottom-menu">
+      <button class="nav-item">
+        <i class="bx bx-cog"></i>
+        <span class="tooltip">Configuración</span>
+      </button>
+      <button class="nav-item">
+        <i class="bx bx-help-circle"></i>
+        <span class="tooltip">Ayuda</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="logo-section">
+        <h1 class="logo">NexusCRM</h1>
+        <span class="slogan">Anticipando el futuro</span>
+      </div>
+      <div class="header-actions">
+        <div class="status-indicators">
+          <div class="status-item">
+            <i class="bx bx-network-chart"></i>
+            <span>Red 7G</span>
+          </div>
+          <div class="status-item">
+            <i class="bx bx-chip"></i>
+            <span>IA Activa</span>
+          </div>
+        </div>
+        <div class="user-profile">
+          <div class="notifications">
+            <button class="notification-btn">
+              <i class="bx bx-bell"></i>
+              <span class="notification-badge">3</span>
+            </button>
+          </div>
+          <div class="profile-info">
+            <img
+              src="assets/avatar-placeholder.jpg"
+              alt="Profile"
+              class="avatar"
+            />
+            <div class="user-details">
+              <span class="user-name">Alex Johnson</span>
+              <span class="user-role">Administrador</span>
+            </div>
+            <i class="bx bx-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats Cards -->
+    <div class="stats-cards">
+      <div class="stat-card">
+        <div class="stat-icon purple">
+          <i class="bx bx-user-plus"></i>
+        </div>
+        <div class="stat-details">
+          <span class="stat-title">Nuevos Clientes</span>
+          <span class="stat-value">+145</span>
+          <span class="stat-change positive">
+            <i class="bx bx-up-arrow-alt"></i>
+            12.5%
+          </span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon blue">
+          <i class="bx bx-dollar-circle"></i>
+        </div>
+        <div class="stat-details">
+          <span class="stat-title">Ingresos Mensuales</span>
+          <span class="stat-value">$52,859</span>
+          <span class="stat-change positive">
+            <i class="bx bx-up-arrow-alt"></i>
+            8.2%
+          </span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon green">
+          <i class="bx bx-check-circle"></i>
+        </div>
+        <div class="stat-details">
+          <span class="stat-title">Tareas Completadas</span>
+          <span class="stat-value">89%</span>
+          <span class="stat-change positive">
+            <i class="bx bx-up-arrow-alt"></i>
+            5.1%
+          </span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon orange">
+          <i class="bx bx-time-five"></i>
+        </div>
+        <div class="stat-details">
+          <span class="stat-title">Tiempo Promedio</span>
+          <span class="stat-value">1.8h</span>
+          <span class="stat-change negative">
+            <i class="bx bx-down-arrow-alt"></i>
+            3.2%
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+      <!-- Sección izquierda: Gráficos y métricas -->
+      <div class="main-metrics">
+        <div class="predictive-alert">
+          <div class="alert-header">
+            <i class="bx bx-error-circle"></i>
+            <h3>Alerta Predictiva</h3>
+          </div>
+          <p class="alert-message">
+            Posible falla en torre #12 - Activar mantenimiento preventivo
+          </p>
+          <div class="timeline">
+            <div class="timeline-item" *ngFor="let item of timelineEvents">
+              <i class="bx bx-radio-circle"></i>
+              <div class="timeline-content">
+                <span class="time">{{ item.time }}</span>
+                <span class="event">{{ item.event }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="satisfaction-metric">
+          <div class="gauge">
+            <svg viewBox="0 0 100 100" class="gauge-circle">
+              <circle cx="50" cy="50" r="45" class="gauge-background" />
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                class="gauge-progress"
+                [style.stroke-dasharray]="283"
+                [style.stroke-dashoffset]="283 - 283 * 0.95"
+              />
+            </svg>
+            <span class="percentage">95%</span>
+          </div>
+          <p><i class="bx bx-happy-heart-eyes"></i> Satisfacción del Cliente</p>
+        </div>
+      </div>
+
+      <!-- Sección derecha: Acciones automáticas -->
+      <div class="automated-actions">
+        <h3 class="section-title">
+          <i class="bx bx-automation"></i>
+          Acciones Automáticas
+        </h3>
+        <div class="actions-list">
+          <div class="action-item" *ngFor="let action of automatedActions">
+            <i [class]="'bx ' + action.icon"></i>
+            <div class="action-details">
+              <p class="action-description">{{ action.description }}</p>
+              <span class="action-status" [class]="action.statusClass">
+                <i [class]="'bx ' + action.statusIcon"></i>
+                {{ action.status }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

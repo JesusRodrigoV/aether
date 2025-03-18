@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
     "@types/aos": "^3.0.7",
+    "angular-cli-ghpages": "^2.0.3",
     "aos": "^2.3.4",
     "boxicons": "^2.1.4",
     "rxjs": "~7.8.0",
