@@ -1,12 +1,11 @@
-import { NgIf, NgOptimizedImage } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import AOS from 'aos';
-import ContactSalesComponent from '../contact-sales/contact-sales.component';
 
 @Component({
   selector: 'app-about',
-  imports: [NgOptimizedImage, RouterLink, NgIf],
+  imports: [RouterLink, NgIf],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
